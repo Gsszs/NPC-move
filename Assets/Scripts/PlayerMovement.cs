@@ -53,6 +53,11 @@ public class PlayerMovement : MonoBehaviour
             rb.linearDamping = 0;
         }
 
+        if(Input.GetKeyDown(KeyCode.Space) && grounded)
+        {
+            rb.AddForce(Vector3.up * 500);
+        }
+
         // Controle de velocidade
         SpeedControl();
     }
